@@ -1,6 +1,6 @@
 # 🎓 FYPals — Final Year Project Management & Collaboration Platform
 
-**FYPals** is a comprehensive, web-based platform designed to streamline the Final Year Project (FYP) cycle for students, advisors, FYP coordinators (staff), and administrators. It combines project tracking, team collaboration, peer discussions, and supervisor coordination into a single, intuitive system.
+**FYPals** is a comprehensive, web-based platform designed to streamline the Final Year Project (FYP) cycle for students, advisors, FYP coordinators (staff), and administrators. It combines project tracking, team collaboration, peer discussions, and supervisor coordination into a single, intuitive system (screenshots attached at end).
 
 ---
 
@@ -129,3 +129,42 @@ The database seeder initializes the database with a clean set of test accounts a
 | **Student** | `student2@gmail.com` | `Password@123` | Leader of **Beta Team** |
 | **Advisor** | `advisor1@gmail.com` | `Password@123` | Supervisor of **Alpha Team** |
 | **Advisor** | `advisor2@gmail.com` | `Password@123` | Supervisor of **Beta Team** |
+
+
+
+
+
+https://github.com/user-attachments/assets/85afccef-3b9a-42a1-b70f-2cb4e4dd8ced
+
+
+
+## Admin Side:
+
+<img width="1915" height="874" alt="image" src="https://github.com/user-attachments/assets/60ff0109-b60d-456f-83ab-c5d319fdee13" />
+
+<img width="1344" height="721" alt="image" src="https://github.com/user-attachments/assets/f8ff9647-61de-49b2-b57f-12bd19679ec0" />
+
+<img width="1234" height="854" alt="image" src="https://github.com/user-attachments/assets/f0497458-1478-4d8e-a3fc-0b4a64703e11" />
+
+
+
+
+## Student Side:
+
+<img width="1510" height="742" alt="image" src="https://github.com/user-attachments/assets/c897114e-ca92-4f72-8330-7510731b6ec2" />
+
+<img width="1236" height="770" alt="image" src="https://github.com/user-attachments/assets/d67dbabd-5f48-48ac-a665-05c7cbb21bf7" />
+
+<img width="1656" height="866" alt="image" src="https://github.com/user-attachments/assets/26ed3bc0-3b73-4058-9782-3cc511bce2a0" />
+
+<img width="1373" height="586" alt="image" src="https://github.com/user-attachments/assets/d69af9e7-0f1e-4fc5-829a-ef7724d0c49b" />
+
+
+
+
+
+## Advisor Side:
+
+<img width="1390" height="724" alt="image" src="https://github.com/user-attachments/assets/4106c2be-93cc-4da0-a384-34fefcd65c8d" />
+
+
