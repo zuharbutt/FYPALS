@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ── Light mode ─────────────────────────────────────────── */
+  :root {
+    --background:         240 20% 97%;
+    --foreground:         240 10% 10%;
+
+    --card:               0 0% 100%;
+    --card-foreground:    240 10% 10%;
+
+    --popover:            0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    /* Purple/violet accent — matches Dashdark X */
+    --primary:            262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary:          262 30% 94%;
+    --secondary-foreground: 262 50% 30%;
+
+    --muted:              240 15% 93%;
+    --muted-foreground:   240 10% 45%;
+
+    --accent:             262 30% 92%;
+    --accent-foreground:  262 60% 35%;
+
+    --destructive:        0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border:             240 15% 88%;
+    --input:              240 15% 88%;
+    --ring:               262 83% 58%;
+
+    --radius: 0.6rem;
+
+    /* Sidebar specific */
+    --sidebar-bg:         0 0% 100%;
+    --sidebar-border:     240 15% 88%;
+    --sidebar-active-bg:  262 30% 92%;
+    --sidebar-active-fg:  262 83% 45%;
+
+    /* Navbar */
+    --navbar-bg:          0 0% 100%;
+  }
+
+  /* ── Dark mode ──────────────────────────────────────────── */
+  .dark {
+    --background:         230 20% 10%;
+    --foreground:         220 20% 90%;
+
+    --card:               230 18% 13%;
+    --card-foreground:    220 20% 90%;
+
+    --popover:            230 18% 13%;
+    --popover-foreground: 220 20% 90%;
+
+    --primary:            262 83% 63%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary:          262 20% 20%;
+    --secondary-foreground: 262 60% 85%;
+
+    --muted:              230 15% 18%;
+    --muted-foreground:   220 15% 55%;
+
+    --accent:             262 25% 22%;
+    --accent-foreground:  262 70% 85%;
+
+    --destructive:        0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border:             230 15% 20%;
+    --input:              230 15% 20%;
+    --ring:               262 83% 63%;
+
+    /* Sidebar */
+    --sidebar-bg:         230 18% 12%;
+    --sidebar-border:     230 15% 18%;
+    --sidebar-active-bg:  262 25% 22%;
+    --sidebar-active-fg:  262 80% 78%;
+
+    /* Navbar */
+    --navbar-bg:          230 18% 12%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Smooth transitions for theme switch */
+  *, *::before, *::after {
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.1s ease;
+  }
+
+  /* Override transition on animations to not slow them */
+  .animate-spin, .animate-pulse, [data-state] {
+    transition: none;
+  }
+}
+
+/* ── Custom scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}
+
+/* ── Sidebar uses CSS vars so it reacts to dark mode ──────── */
+aside {
+  background-color: hsl(var(--sidebar-bg)) !important;
+  border-color: hsl(var(--sidebar-border)) !important;
+}
+
+/* ── Navbar uses CSS vars ─────────────────────────────────── */
+header {
+  background-color: hsl(var(--navbar-bg)) !important;
+  border-color: hsl(var(--sidebar-border)) !important;
+}
+
+/* Bug 9 fix: Date/datetime input calendar picker must be visible in dark mode.
+   The native OS calendar popup inherits color-scheme, so we force light on the
+   input widget itself to ensure the popup renders with a white/light background. */
+input[type="date"],
+input[type="datetime-local"],
+input[type="time"] {
+  color-scheme: light;
+}
+.dark input[type="date"],
+.dark input[type="datetime-local"],
+.dark input[type="time"] {
+  color-scheme: dark;
+  background-color: hsl(var(--input));
+  color: hsl(var(--foreground));
+}

@@ -1,0 +1,2 @@
+package com.fypals.FYPals.enums;
+public enum NotificationType { TEAM_INVITE, ADVISOR_INVITE, DISPUTE_RAISED, DELIVERABLE_SUBMITTED, FEEDBACK_GIVEN, REMINDER }
